@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  text-align: left;
+  list-style-type: none;
+  border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+
+}
+
+body {
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 上の部分は気にせずここから書く */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* 横方向中央配置 */
+  height: 100vh;
+}
+
+.parent {
+  position: relative; /* 親要素に相対位置を指定 */
+  width: 500px; /* 親要素の幅 */
+  height: 500px; /* 親要素の高さ */
+  border: 1.5px solid black; /* 枠の幅と色を指定 */
+  margin-top: 20px; /* 上部の余白を20pxに固定 */
+}
+
+.child1 {
+  position: absolute; /* 子要素に絶対位置を指定 */
+  width: 170px; /* 子要素の幅 */
+  height: 80px; /* 子要素の高さ */
+  background-color: red;
+  top: 0; /* 親要素の上端から配置 */
+  left: 240px; /* 親要素の左端に配置 */
+}
+
+.child2 {
+  position: absolute; /* 子要素に絶対位置を指定 */
+  width: 170px; /* 子要素の幅 */
+  height: 80px; /* 子要素の高さ */
+  background-color: blue;
+  top: 180px; /* 親要素の上端から配置 */
+  left: 0px; /* 親要素の左端に配置 */
+}
