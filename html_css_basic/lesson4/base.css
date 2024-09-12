@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  text-align: left;
+  list-style-type: none;
+  border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+
+}
+
+body {
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 上の部分は気にせずここから書く */
+
+.container {
+  display: flex;
+  width: 500px; /* 幅を500pxに固定 */
+  height: 300px; /* 高さを300pxに固定 */
+  margin: 5px auto; /* 上部に5pxのマージンを追加して、左右のマージンを自動調整 */
+  background-position: center center;
+}
+
+.box {
+  flex: 1;
+  display: flex; 
+}
+
+.box:nth-child(1) {
+  background-color: red; /* 最初のボックスの背景色 */
+}
+
+.box:nth-child(2) {
+  background-color: blue; /* 2番目のボックスの背景色 */
+}
+
+.box:nth-child(3) {
+  background-color: green; /* 3番目のボックスの背景色 */
+}
+
+.content {
+  width: 30px; /* 四角形の幅 */
+  height: 30px; /* 四角形の高さ */
+  background-color: white; /* 四角形の背景色 */
+  border: 1px solid black; /* 四角形の枠線 */
+  margin: 4px; /* 画像の周りに4pxの間隔を追加 */
+}
+.box:nth-child(1) .inner-box:nth-child(1) {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* 子要素を横方向に中央に配置 */
+  align-items: center; /* 子要素を縦方向に中央に配置 */
+}
+
+.box:nth-child(2) .inner-box:nth-child(1) {
+  flex: 1;
+  display: flex;  
+  justify-content: flex-end; /* 子要素を水平方向に右寄せに配置 */
+}
+
+.box:nth-child(3) .inner-box:nth-child(1) {
+  flex: 1;
+  display: flex;  
+  flex-direction: column; /* 子要素を縦方向に配置 */
+  align-items: flex-start; /* 子要素を水平方向に左揃えに配置 */
+  justify-content: flex-end; /* 子要素を縦方向に下揃えに配置 */
+  }
